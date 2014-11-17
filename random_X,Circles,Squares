@@ -1,0 +1,31 @@
+void setup() { 
+  size(960, 840); 
+  noStroke(); 
+  smooth();    //Draws all geometry with smooth (anti-aliased) edges. smooth() will also improve image quality of resized images
+}
+void draw() { 
+  background(0);
+  drawX(int(random(255)), int(random(255)), int(random(255)), int (random(30)), int(random(width)), int(random(height)), int(random(300))); // the 3 functions are called with random values
+  drawCircle(int(random(255)), int(random(255)), int(random(255)), int(random(width)), int(random(height)), int(random(250)));
+  drawRect(int(random(width)), int(random(height)), int(random(250)));
+}
+
+void drawX(int R, int G, int B, int weight, int x, int y, int size) //function that draws a X
+{
+  stroke(R, G, B);
+  strokeWeight(weight); 
+  line(x, y, x+size, y+size);
+  line(x+size, y, x, y+size);
+}
+
+void drawCircle(int R, int G, int B, int x, int y, int h) //function that draws a circle
+{
+  noStroke();
+  fill(R, G, B);
+  ellipse(x, y, h, h);
+}
+
+void drawRect(int x, int y, int m) //function that draws a squere
+{
+  rect(x, y, m, m);
+}
