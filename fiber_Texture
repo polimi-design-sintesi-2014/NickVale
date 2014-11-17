@@ -1,0 +1,42 @@
+float y=200;
+float x=200;
+int a=150;
+int b=150;
+
+void setup()
+{
+  size(400, 400);
+  background(255, 255, 100);
+  
+}
+
+void draw()
+{
+    
+    fill(0, b, a); //the color value starts from (0, 150, 150)
+    ellipse(x, y, 30, 30); //draw a circle
+    y = y + int(random(-5,10)); // y position increases by a value between the vlues -5 and 10
+    x = x + int(random(-7,9));  // X position increases by a value between the vlues -7 and 9
+    a= a + int(random(-5,5));   // a and b color increase by a value between -5 and 5
+    b= b + int(random(-5,5));
+    if(y>height) //if y or x are bigger than the width and height they are set to 0
+    {
+      y=0;
+    }
+    if(x>width)
+    {
+      x=0;
+    }
+    if (a>255)  //when a or b reach value 255 they are set to 150 value
+    {
+      a = 150;
+    }
+    if (b>255)
+    {
+      b = 150;
+    }
+    
+  
+}
+
+
